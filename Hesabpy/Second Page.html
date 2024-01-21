@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بدايتك هنا<Python</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        direction: rtl;
+        margin: 20px;
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>.أولًا: ما ستحتاجه</h1>
+    </header>
+
+    <section>
+        <h2>!مرحبًا بك في الصفحة الثانية</h2>
+        <p>
+            هذه هي الصفحة الثانية من موقع حسابي.
+        </p>
+    </section>
+
+    <section>
+        <h2>أمر: print</h2>
+        <p>أولا، سنتعلم الدالة التي سيكثر استخدامها وذكرها طوال هذه اللرحلة، وهي أمر (print)، هذا الأمر يطبع ما يليه، سواء كان نصًا أو نتيجة عملية احتواه. يبدو بسيطا، صحيح؟ فلنجرب استخدامه:</p>
+      <p>print("يحد القوسين في هذا السطر ما سيتم تنفيذه، بينما علامتي التنصيص  حددا النص المطبوع، فتمت معاملته كنصٍ عوضًا عن أمر.") 
+</p>
+        <label for="question1">اطبع: هل أنا جاهز للتعلم؟</label>
+        <input type="text" id="question1" name="question1" placeholder="أدخل الإجابة">
+        <button onclick="checkAnswer('question1', 'print(&quot;هل أنا جاهز للتعلم؟&quot;)')">تحقق</button>
+        <p id="result1"></p>
+        <label for="question2">اطبع: بالتأكيد أنا جاهز!</label>
+        <input type="text" id="question2" name="question2" placeholder="أدخل الإجابة">
+        <button onclick="checkAnswer('question2', 'print(&quot;بالتأكيد أنا جاهز!&quot;)')">تحقق</button>
+        <p id="result2"></p>
+
+        <script>
+            function checkAnswer(questionId, correctAnswer) {
+                var userAnswer = document.getElementById(questionId).value;
+                var resultElement = document.getElementById("result" + questionId.charAt(questionId.length - 1));
+
+                if (userAnswer == correctAnswer) {
+                    resultElement.textContent = "إجابة صحيحة!";
+                } else {
+                    resultElement.textContent = "إجابة خاطئة، حاول مرة أخرى.";
+                }
+            }
+        </script>
+</script>
+    </section>
+
+    <section>
+     
+    </section>
+
+    <section>
+
+    
+
+<section>
+  <h2>المتغيرات</h2>
+  <p>
+      غالبًا ما تعرف المتغيرات بأنها تمثيل رمزي يدل على كمية أو قيمة، ولكن في هذه الحال، سيكون التعريف الأدق أنها عناوين للتخزين في الذاكرة مرتبطة باسم رمزي. ويمكنك مقارنتها بهوية شخص ما، حيث أن لهذا الشخص هوية تمثل هو وحده، ولا يمكن لشخصين أن يمتلكا نفس الهوية. 
+  </p>
+  <br>
+  <p>
+    يمكنك تعيين متغير بالطريقة الآتية، حيث تبدأ باسم المتغير ومن ثم قيمته:
+  </p>
+  <br>
+  <p>
+    Age = 15 
+  </p>
+  <br>
+  <p>تذكر، حتى أبسط التغييرات تصنع متغيرا جديدًا. ف Age متغيرٌ مختلفٌ عن AGE.</p>
+  <p> لنحل بعض التمارين:</p>
+<label for="question3">عين متغيرًا باسم Number، واجعل قيمته 8.</label>
+<input type="text" id="question3" name="question3" placeholder="أدخل الإجابة">
+<button onclick="checkAnswer('question3', 'Number = 8')">تحقق</button>
+<p id="result3"></p>
+<label for="question4">عين متغيرا باسم Number1 وعين قيمته 2.</label>
+<input type="text" id="question4" name="question4" placeholder="أدخل الإجابة">
+<button onclick="checkAnswer('question4', 'Number1 = 2')">تحقق</button>
+<p id="result4"></p>
+
+<script>
+    function checkAnswer(questionId, correctAnswer) {
+        var userAnswer = document.getElementById(questionId).value;
+        var resultElement = document.getElementById("result" + questionId.charAt(questionId.length - 1));
+
+        if (userAnswer == correctAnswer) {
+            resultElement.textContent = "إجابة صحيحة!";
+        } else {
+            resultElement.textContent = "إجابة خاطئة. توجيهات إضافية: عند تعيين متغير، نبدأ باسم المتغير، ومن ثم علامة المساواة الدالة على قيمته و قيمته نفسها.";
+        }
+    }
+</script>
+  <br>
+  <p>
+    بما أننا تعرفنا على أهم جزئين، سنبدأ الآن بالعمليات الحسابية. <a href="Third Page.html">.العمليات الحسابية</a>
+  </p>
+</body>
+</html>
+

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العمليات الحسابية</title>
+  <script>
+    function checkAnswer(questionId, expectedAnswer) {
+        var answer = document.getElementById(questionId).value;
+        var resultId = "result" + questionId.replace("question", ""); // Extract the numeric part
+        var resultElement = document.getElementById(resultId);
+
+        if (resultElement) {
+            if (answer.trim() === expectedAnswer.trim()) {
+                resultElement.textContent = "إجابة صحيحة!";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.textContent = "إجابة خاطئة. حاول مرة أخرى.";
+                resultElement.style.color = "red";
+            }
+        } else {
+            console.error("Result element not found for question: " + questionId);
+        }
+    }
+  </script>
+</head>
+
+<body>
+    <h1>العمليات الحسابية</h1>
+
+    <p>لكل تجربة بداياتها، وستكون بدايتك هنا استخدام العمليات الرياضية في بايثون؛ حتى تتمكن من استخدامها لاحقًا.</p>
+
+    <h3>الجمع</h3>
+    <p>الجمع، ويأتي بالصيغة الآتية: </p>
+  <p>A + B = C </p>
+  <p>حيث للمتغيران أي قيمتان، و C هو ناتج جمعهما.</p>
+
+    <h3>تمرين</h3>
+  <p>(ملاحظة: القيمة النهائية فقط من غير الكود المستخدم)</p>
+  <p>أدخل نتيجة ما يأتي:</p>
+    <div>
+        <label for="question1">-ناتج جمع 3 و4</label>
+        <input type="text" id="question1" name="question1" placeholder="أدخل الإجابة">
+        <button onclick="checkAnswer('question1', '7')">تحقق</button>
+        <p id="result1"></p>
+    </div>
+
+    <div>
+        <label for="question2">-ناتج جمع 33 و44</label>
+        <input type="text" id="question2" name="question2" placeholder="أدخل الإجابة">
+        <button onclick="checkAnswer('question2', '77')">تحقق</button>
+        <p id="result2"></p>
+    </div>
+
+    <div>
+        <label for="question3">-ناتج جمع 344 و443</label>
+        <input type="text" id="question3" name="question3" placeholder="أدخل الإجابة">
+        <button onclick="checkAnswer('question3', '787')">تحقق</button>
+        <p id="result3"></p>
+    </div>
+<p>توجيهات إضافية:تأكد من الأرقام التي أدخلتها، ففي هذه الحالة، سنستخدم أمر (print) حتى نحصل على النتيجة النهائية، وسيكون في مثل هذه الصيغة:
+print(A + B),</p>
+  <br>
+  <h3>الطرح</h3>
+  <p>الطرح، ويأتي بالصيغة الآتية: </p>
+  <p>A - B = C </p>
+  <p>حيث للمتغيران أي قيمتان، و C هو ناتج الطرح.</p>
+
+  <h3>تمرين</h3>
+  <p>(ملاحظة: القيمة النهائية فقط من غير الكود المستخدم)</p>
+  <p>أدخل نتيجة ما يأتي:</p>
+  <div>
+      <label for="question4">-ناتج طرح 3 من 9</label>
+      <input type="text" id="question4" name="question4" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question4', '6')">تحقق</button>
+      <p id="result4"></p>
+  </div>
+
+  <div>
+      <label for="question5">-ناتج الطرح 22 من 50</label>
+      <input type="text" id="question5" name="question5" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question5', '28')">تحقق</button>
+      <p id="result5"></p>
+  </div>
+
+  <div>
+      <label for="question6">-ناتج الطرح 443 من 1000</label>
+      <input type="text" id="question6" name="question6" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question6', '557')">تحقق</button>
+      <p id="result6"></p>
+  </div>
+  <p>توجيهات إضافية: تأكد من الأرقام التي أدخلتها، ففي هذه الحالة، سنستخدم أمر (print) حتى نحصل على النتيجة النهائية، وسيكون في مثل هذه الصيغة: print(A - B),</p>
+  <br>
+  <h3>القسمة</h3>
+  <p>القسمة، ويأتي بالصيغة الآتية: </p>
+  <p>A ÷ B = C </p>
+  <p>حيث للمتغيران أي قيمتان، و C هو ناتج القسمة.</p>
+
+  <h3>تمرين</h3>
+  <p>(ملاحظة: القيمة النهائية فقط من غير الكود المستخدم)</p>
+  <p>أدخل نتيجة ما يأتي:</p>
+  <div>
+      <label for="question7">-ناتج القسمة 9 ÷ 3</label>
+      <input type="text" id="question7" name="question7" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question7', '3')">تحقق</button>
+      <p id="result7"></p>
+  </div>
+
+  <div>
+      <label for="question8">-ناتج القسمة 50 ÷ 22</label>
+      <input type="text" id="question8" name="question8" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question8', '2.27')">تحقق</button>
+      <p id="result8"></p>
+  </div>
+
+  <div>
+      <label for="question9">-ناتج القسمة 1000 ÷ 443</label>
+      <input type="text" id="question9" name="question9" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question9', '2.26')">تحقق</button>
+      <p id="result9"></p>
+  </div>
+  <p>توجيهات إضافية: تأكد من الأرقام التي أدخلتها، ففي هذه الحالة، سنستخدم أمر (print) حتى نحصل على النتيجة النهائية، وسيكون في مثل هذه الصيغة: print(A ÷ B),</p>
+  <br>
+
+  <h3>الضرب</h3>
+  <p>الضرب، ويأتي بالصيغة الآتية: </p>
+  <p>A × B = C </p>
+  <p>حيث للمتغيران أي قيمتان، و C هو ناتج الضرب.</p>
+
+  <h3>تمرين</h3>
+  <p>(ملاحظة: القيمة النهائية فقط من غير الكود المستخدم)</p>
+  <p>أدخل نتيجة ما يأتي:</p>
+  <div>
+      <label for="question10">-ناتج الضرب 3 في 4</label>
+      <input type="text" id="question10" name="question10" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question10', '12')">تحقق</button>
+      <p id="result10"></p>
+  </div>
+
+  <div>
+      <label for="question11">-ناتج الضرب 7 في 8</label>
+      <input type="text" id="question11" name="question11" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question11', '56')">تحقق</button>
+      <p id="result11"></p>
+  </div>
+
+  <div>
+      <label for="question12">-ناتج الضرب 10 في 11</label>
+      <input type="text" id="question12" name="question12" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question12', '110')">تحقق</button>
+      <p id="result12"></p>
+  </div>
+
+  <p>توجيهات إضافية: تأكد من الأرقام التي أدخلتها، ففي هذه الحالة، سنستخدم أمر (print) حتى نحصل على النتيجة النهائية، وسيكون في مثل هذه الصيغة: print(A × B),</p>
+<br>
+  <h3>القسمة التحتية(الصحيحة)</h3>
+  <p>القسمة التحتية، وتأتي بالصيغة الآتية: </p>
+  <p>A // B = C </p>
+  <p>حيث للمتغيران أي قيمتان، و C هو ناتج القسمة التحتية.</p>
+  <p>اعتبرها بمثابة القسمة بأعداد صحيحة، مثلا، إن قسمت 9 على خمسة، سيكون الناتج 1.8؛ في القسمة التحتية، سيكون العدد 1 بدون أي كسور.</p>
+
+  <h3>تمرين</h3>
+  <p>(ملاحظة: القيمة النهائية فقط من غير الكود المستخدم)</p>
+  <p>أدخل نتيجة ما يأتي:</p>
+  <div>
+      <label for="question13">-ناتج القسمة التحتية ل14 على 3</label>
+      <input type="text" id="question13" name="question13" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question13', '4')">تحقق</button>
+      <p id="result13"></p>
+  </div>
+
+  <div>
+      <label for="question14">-القسمة التحتية للعدد 30 على 7</label>
+      <input type="text" id="question14" name="question14" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question14', '4')">تحقق</button>
+      <p id="result14"></p>
+  </div>
+
+  <div>
+      <label for="question15">-القسمة التحتية للعدد 60 على 9</label>
+      <input type="text" id="question15" name="question15" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question15', '6')">تحقق</button>
+      <p id="result15"></p>
+  </div>
+  <p>توجيهات إضافية: تأكد من الأرقام التي أدخلتها، ففي هذه الحالة، سنستخدم أمر (print) حتى نحصل على النتيجة النهائية، وسيكون في مثل هذه الصيغة: print(A // B),</p>
+  <br>
+  <h3>التربيع</h3>
+    <p>التربيع يأتي بالصيغة الآتية: </p>
+    <p>A ** B = C </p>
+    <p>حيث للمتغيرين أي قيمتان، و A هو الأساس، B هو الأس و C ناتج العملية بينهما.</p>
+
+    <h3>تمرين</h3>
+    <p>(ملاحظة: القيمة النهائية فقط من غير الكود المستخدم)</p>
+    <p>أدخل نتيجة ما يأتي:</p>
+
+    <div>
+        <label for="question16">-ناتج التربيع للعدد 4</label>
+        <input type="text" id="question16" name="question16" placeholder="أدخل الإجابة">
+        <button onclick="checkAnswer('question16', '16')">تحقق</button>
+        <p id="result16"></p>
+    </div>
+
+    <div>
+        <label for="question17">-ناتج التربيع للعدد 3</label>
+        <input type="text" id="question17" name="question17" placeholder="أدخل الإجابة">
+        <button onclick="checkAnswer('question17', '9')">تحقق</button>
+        <p id="result17"></p>
+    </div>
+
+    <div>
+        <label for="question18">-ناتج التربيع للعدد 5</label>
+        <input type="text" id="question18" name="question18" placeholder="أدخل الإجابة">
+        <button onclick="checkAnswer('question18', '25')">تحقق</button>
+        <p id="result18"></p>
+    </div>
+
+    <p>توجيهات إضافية: تأكد من الأرقام التي أدخلتها، ففي هذه الحالة، سنستخدم أمر (print) حتى نحصل على النتيجة النهائية، وسيكون في مثل هذه الصيغة: print(A ** B),</p>
+  <br>
+  <h3>باقي القسمة</h3>
+  <p>باقي القسمة يأتي بالصيغة الآتية: </p>
+  <p>A % B = C </p>
+  <p>حيث للمتغيرين أي قيمتان، و C هو باقي القسمة بينهما.</p>
+  <p>مثلًا، ان قسمت 9 على 4، سيكون باقي القسمة 1. تخيلها بالطريقة الآتية: 9= (2× 4) + 1، فيكون الواحد باقي القسمة.</p>
+
+  <h3>تمرين</h3>
+  <p>(ملاحظة: القيمة النهائية فقط من غير الكود المستخدم)</p>
+  <p>أدخل نتيجة ما يأتي:</p>
+
+  <div>
+      <label for="question19">-باقي القسمة لـ 17 على 5</label>
+      <input type="text" id="question19" name="question19" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question19', '2')">تحقق</button>
+      <p id="result19"></p>
+  </div>
+
+  <div>
+      <label for="question20">-باقي القسمة لـ 25 على 8</label>
+      <input type="text" id="question20" name="question20" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question20', '1')">تحقق</button>
+      <p id="result20"></p>
+  </div>
+
+  <div>
+      <label for="question21">-باقي القسمة لـ 36 على 7</label>
+      <input type="text" id="question21" name="question21" placeholder="أدخل الإجابة">
+      <button onclick="checkAnswer('question21', '1')">تحقق</button>
+      <p id="result21"></p>
+  </div>
+
+  <p>توجيهات إضافية: تأكد من الأرقام التي أدخلتها، ففي هذه الحالة، سنستخدم أمر (print) حتى نحصل على النتيجة النهائية، وسيكون في مثل هذه الصيغة:</p>
+  <p>
+    print(A % B)</p>
+
+
+  <p>
+      بما أنك تعلمت أساسيات العمليات الحسابية، لماذا لا تختبر مهاراتك بهذا
+      <a href="The_Exam.html">الاختبار النهائي</a>؟
+  </p>
+</body>
+
+</html>
